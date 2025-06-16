@@ -22,7 +22,7 @@
   />
   <meta name="author" content="LiquidGlassHQ.com" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href={page.url.href} />
+  <link rel="canonical" href="https://liquidglasshq.com/submit" />
 </svelte:head>
 
 <div class="container mx-auto max-w-2xl px-4 py-8 md:py-16">

@@ -18,7 +18,7 @@
         <Image
           src={urlFor(post.mainImage).width(900).height(600).url()}
           layout="constrained"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-contain aspect-video"
           alt={post.title || "Blog post image"}
         />
       </a>

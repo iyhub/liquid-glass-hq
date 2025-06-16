@@ -17,7 +17,7 @@
     <Button variant="outline" class="border" onclick={() => open.set(!status)}>
       <Menu />
     </Button>
-    <span class="text-2xl font-bold">Liquid Glass HQ</span>
+    <a href="/" class="text-2xl font-bold">Liquid Glass HQ</a>
   </div>
   <div class="flex gap-4 items-center">
     <Button href="/submit">

@@ -24,9 +24,15 @@
       content={urlFor(post.mainImage).width(1200).height(630).url()}
     />
   {/if}
-  <meta property="og:url" content={page.url.href} />
+  <meta
+    property="og:url"
+    content={`https://liquidglasshq.com/detail/${post.slug.current}`}
+  />
   <meta property="og:type" content="article" />
-  <link rel="canonical" href={page.url.href} />
+  <link
+    rel="canonical"
+    href={`https://liquidglasshq.com/detail/${post.slug.current}`}
+  />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content={post.title} />
   <meta property="twitter:site" content="@liquidglassHQ.com" />

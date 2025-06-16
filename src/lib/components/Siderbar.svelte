@@ -10,10 +10,9 @@
   });
 
   const links = [
-    { href: "/category/website", label: "WebSite" },
-    { href: "/category/app", label: "App" },
-    { href: "/category/articles", label: "Articles" },
-    { href: "/category/resources", label: "Resources" },
+    { href: "/category/website", label: "Website" },
+    { href: "/category/article", label: "Article" },
+    { href: "/category/resource", label: "Resource" },
   ];
 </script>
 

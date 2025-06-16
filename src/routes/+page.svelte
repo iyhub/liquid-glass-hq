@@ -21,7 +21,7 @@
     name="description"
     content="A curated hub of Apple-style UI inspiration, design resources, and tools — all shaped by the Liquid Glass aesthetic."
   />
-  <link rel="canonical" href={page.url.href} />
+  <link rel="canonical" href="https://liquidglasshq.com/" />
   <meta
     property="og:title"
     content="Liquid Glass: The Next Era of Apple-Inspired UI"

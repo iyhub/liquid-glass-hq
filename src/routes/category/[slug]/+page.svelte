@@ -26,6 +26,10 @@
 <svelte:head>
   <title>{category?.title} | LiquidGlassHQ.com</title>
   <meta name="description" content={category?.excerpt} />
+  <link
+    rel="canonical"
+    href={`https://liquidglasshq.com/category/${currentSlug}`}
+  />
 </svelte:head>
 
 <div class="container mx-auto">
