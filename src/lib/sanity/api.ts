@@ -12,11 +12,6 @@ export function assertEnvVar<T>(value: T | undefined, name: string): T {
   return value;
 }
 
-console.log("PUBLIC_SANITY_DATASET==>", PUBLIC_SANITY_DATASET);
-console.log("PUBLIC_SANITY_PROJECT_ID==>", PUBLIC_SANITY_PROJECT_ID);
-console.log("PUBLIC_SANITY_API_VERSION==>", PUBLIC_SANITY_API_VERSION);
-console.log("PUBLIC_SANITY_STUDIO_URL==>", PUBLIC_SANITY_STUDIO_URL);
-
 export const dataset = assertEnvVar(
   PUBLIC_SANITY_DATASET,
   "PUBLIC_SANITY_DATASET"
