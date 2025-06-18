@@ -12,6 +12,9 @@
       ? (actionResult.data as { error: string })?.error
       : null
   );
+  let url = $state("");
+  let excerpt = $state("");
+  let submitting = $state(false);
 </script>
 
 <svelte:head>
@@ -37,10 +40,18 @@
     <form
       method="post"
       use:enhance={(formData) => {
+        submitting = true;
         console.log("formData", formData);
         return async ({ result, update }) => {
           console.log("result", result);
           actionResult = result;
+          if (result.type === "success") {
+            alert("Submitted successfully");
+            url = "";
+            excerpt = "";
+            update({ reset: true });
+          }
+          submitting = false;
         };
       }}
       class="space-y-4 bg-card p-6 rounded-lg shadow-sm border"
@@ -67,9 +78,9 @@
       </div>
 
       <div class="pt-2">
-        <Button type="submit" class="w-full">
+        <Button type="submit" class="w-full" disabled={submitting}>
           <Send class="w-4 h-4" />
-          <span>Submit</span>
+          <span>{submitting ? "Submitting..." : "Submit"}</span>
         </Button>
       </div>
       <div class="pt-2">
