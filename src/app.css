@@ -39,6 +39,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --font-roboto: "Roboto", sans-serif;
 }
 
 .dark {
@@ -73,6 +74,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --font-roboto: "Roboto", sans-serif;
 }
 
 
@@ -114,6 +116,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif);
+  --font-roboto: "Roboto", sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -136,5 +139,6 @@
   }
   body {
     @apply bg-background/80 text-foreground;
+    font-family: "Roboto", sans-serif;
   }
 }
