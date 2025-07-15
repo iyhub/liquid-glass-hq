@@ -7,7 +7,7 @@ export const load: PageServerLoad = async (event) => {
 
   // 获取分页参数
   const page = Number(event.url.searchParams.get("page")) || 1;
-  const pageSize = Number(event.url.searchParams.get("pageSize")) || 10;
+  const pageSize = Number(event.url.searchParams.get("pageSize")) || 12;
 
   // 计算分页的起始和结束位置
   const start = (page - 1) * pageSize;
@@ -15,7 +15,8 @@ export const load: PageServerLoad = async (event) => {
 
   const initial = await loadQuery<Post[]>(query, { start, end });
   const totalCount = await loadQuery<number>(postsCountQuery);
-  const count = Number(totalCount);
+
+  const count = Number(totalCount.data);
 
   return {
     query,

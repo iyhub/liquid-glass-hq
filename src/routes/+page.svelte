@@ -67,13 +67,13 @@
   {:else}
     <p class="col-span-full text-center text-gray-500">No posts found</p>
   {/if}
-  <div class="flex justify-center mt-4">
-    <AppPagination
-      currentPage={Number(page.url.searchParams.get("page")) || 1}
-      totalPages={Math.ceil(count / perPage)}
-      onPageChange={(page) => {
-        goto(`/?page=${page}&pageSize=${perPage}`);
-      }}
-    />
-  </div>
 </section>
+<div class="flex justify-center mt-4 pb-4">
+  <AppPagination
+    currentPage={Number(page.url.searchParams.get("page")) || 1}
+    totalPages={Math.ceil(count / perPage)}
+    onPageChange={(page) => {
+      goto(`/?page=${page}&pageSize=${perPage}`);
+    }}
+  />
+</div>
