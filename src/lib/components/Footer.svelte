@@ -3,13 +3,15 @@
 </script>
 
 <footer class="bg-secondary text-center py-4 flex flex-col items-center gap-2">
-  <a
-    href="https://imagetoimage.app/"
-    rel="dofollow"
-    class="text-sm text-muted-foreground"
-  >
-    Image to Image AI
-  </a>
+  <ul>
+    <li>
+      <a href="https://imagetoimage.app/" rel="dofollow"> Image to Image AI </a>
+    </li>
+    <li>
+      <a href="https://tossfly.com/" rel="dofollow">Tossfly</a>
+    </li>
+  </ul>
+
   <p class="text-sm text-muted-foreground">
     &copy; {year} Meet Liquid. All rights reserved.
   </p>
