@@ -10,9 +10,18 @@
   const { data } = $props<{ data: PageData }>();
   let count = $state(data.count);
   let perPage = $state(data.options.pageSize);
-  const q = useQuery(data);
+  let currentPage = $derived(Number(page.url.searchParams.get("page")) || 1);
+  
+  let q = $derived(
+    useQuery(data, {
+      params: { 
+        start: (currentPage - 1) * perPage, 
+        end: currentPage * perPage 
+      }
+    })
+  );
 
-  let posts = $state<Post[]>($q.data as Post[]);
+  let posts = $derived($q.data as Post[]);
 </script>
 
 <svelte:head>

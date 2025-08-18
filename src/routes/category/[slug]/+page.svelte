@@ -12,10 +12,15 @@
   let currentSlug = $state(page.params.slug);
   let count = $state(data.options.totalCount.data);
   let perPage = $state(data.options.pageSize);
+  let currentPage = $derived(Number(page.url.searchParams.get("page")) || 1);
 
   let q = $derived(
     useQuery(data, {
-      key: currentSlug,
+      params: { 
+        start: (currentPage - 1) * perPage, 
+        end: currentPage * perPage,
+        slug: currentSlug
+      }
     })
   );
   let category = $derived(data.options.category.data);
