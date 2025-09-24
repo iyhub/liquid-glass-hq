@@ -2,7 +2,7 @@
   const year = $state(new Date().getFullYear());
 </script>
 
-<footer class="bg-secondary text-center py-4 flex flex-col items-center gap-2">
+<footer class="bg-secondary text-center py-4 flex flex-col md:flex-row items-center gap-2">
   <ul>
     <li>
       <a href="https://imagetoimage.app/" rel="dofollow"> Image to Image AI </a>
