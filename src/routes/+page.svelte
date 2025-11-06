@@ -11,14 +11,14 @@
   let count = $state(data.count);
   let perPage = $state(data.options.pageSize);
   let currentPage = $derived(Number(page.url.searchParams.get("page")) || 1);
-  
+
   let q = $derived(
     useQuery(data, {
-      params: { 
-        start: (currentPage - 1) * perPage, 
-        end: currentPage * perPage 
-      }
-    })
+      params: {
+        start: (currentPage - 1) * perPage,
+        end: currentPage * perPage,
+      },
+    }),
   );
 
   let posts = $derived($q.data as Post[]);
@@ -62,10 +62,20 @@
   <h1 class="text-4xl font-bold">
     Liquid Glass: The Next Era of Apple-Inspired UI
   </h1>
+
   <p class="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
     A curated hub of Apple-style UI inspiration, design resources, and tools —
     all shaped by the Liquid Glass aesthetic.
   </p>
+  <div class="text-xs mt-2 text-center">
+    <a
+      href="https://submito.net/"
+      target="_blank"
+      class="text-xs text-blue-400 underline underline-offset-3"
+    >
+      Listed On Submito</a
+    >
+  </div>
 </section>
 
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
