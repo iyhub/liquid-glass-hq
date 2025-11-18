@@ -30,7 +30,7 @@
     status = value;
   });
 </script>
-<script defer data-domain="liquidglasshq.com" src="https://stats.tierany.net/js/script.js"></script>
+
 <ModeWatcher />
 
 <Navbar />
