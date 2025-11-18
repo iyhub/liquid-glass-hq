@@ -31,6 +31,14 @@
   });
 </script>
 
+<svelte:head>
+  <script
+    defer
+    data-domain="liquidglasshq.com"
+    src="https://stats.tierany.net/js/script.js"
+  ></script>
+</svelte:head>
+
 <ModeWatcher />
 
 <Navbar />
